@@ -13,11 +13,14 @@ A complete, free study site for CBSE Class X Mathematics, by **Dr. PK**.
 ## Put it online with GitHub Pages (about 10 minutes, no software needed)
 
 1. **Create the repository.** Sign in at <https://github.com>, click **+ → New repository**. Name it, for example, `class10-maths`. Choose **Public**. Click **Create repository**.
-2. **Upload the site.** On the new repository page click **uploading an existing file**. Unzip the site on your computer, open the folder, select **everything inside it**
-   (`index.html`, all the chapter `.html` files, the `assets` folder, the `papers` folder, `README.md`, `.nojekyll`) and drag it into the browser window.
-   Wait for the upload to finish, then click **Commit changes**.
-   *Tip:* if the browser refuses a very large drag-and-drop, upload in two goes — first the `assets` folder, then everything else.
-   *Can't see `.nojekyll`?* It is a hidden file, and your computer may not show it. Don't worry — the site works without it.
+2. **Upload the site.** Unzip the site on your computer first (right-click → *Extract All*), and open the extracted folder. On the new repository page click
+   **uploading an existing file**. Now select **everything inside the folder** — `index.html`, all the chapter `.html` files, the **`assets` folder**, the **`papers` folder**,
+   `README.md`, `.nojekyll` — and **drag it from the File Explorer window into the browser window**. Wait for the upload to finish, then click **Commit changes**.
+   * **Drag, don't pick.** The *choose your files* button cannot take folders, so it silently leaves `assets` and `papers` behind — and without `assets` the site shows up
+     as plain black-and-white text with no design, no maths and no buttons. Dragging keeps the folders.
+   * **Check before you leave:** the repository's file list must show an `assets` folder and a `papers` folder above the `.html` files. Missing? Click
+     **Add file → Upload files** and drag just those two folders in.
+   * *Can't see `.nojekyll`?* It is a hidden file, and your computer may not show it. Don't worry — the site works without it.
 3. **Turn on Pages.** Go to **Settings → Pages**. Under *Build and deployment* choose **Source: Deploy from a branch**, **Branch: `main`**, folder **`/ (root)`**, and press **Save**.
 4. **Open your site.** After a minute or two the same page shows the address: `https://YOUR-USERNAME.github.io/class10-maths/`. Share that link with students.
 
@@ -43,6 +46,8 @@ The **Board Papers & Documents** page shows every file in the repository's `pape
 2. **Add file → Upload files**, drag your PDFs in, **Commit changes**.
 3. After about a minute press **Refresh** on the Board Papers page.
 
+No `papers` folder in your repository? Upload the PDFs anywhere — the page also picks up any PDF, Word, PowerPoint, Excel or zip file it finds in the repository.
+
 Group files with sub-folders (`papers/2025/`, `papers/2024/`, `papers/sample-papers/` …) — each becomes a heading. Name files so they read well:
 `2025-maths-standard-set-1.pdf` is shown as “2025 maths standard set 1”. Keep each file under 25 MB.
 On a custom domain, fill in your GitHub user name and repository once in `assets/js/site-config.js`.
@@ -50,6 +55,14 @@ On a custom domain, fill in your GitHub user name and repository once in `assets
 Official sources for the last five years of papers: <https://www.cbse.gov.in/cbsenew/question-paper.html> (question papers) and <https://cbseacademic.nic.in/> (sample papers and marking schemes).
 
 ---
+
+## If something looks wrong
+
+* **The site is plain text on a white page, with a huge black shape at the top.** The `assets` folder did not reach GitHub. Open the repository, click
+  **Add file → Upload files**, drag the `assets` folder in (the folder itself, from File Explorer), commit, wait a minute, then press **Ctrl + F5** on the site.
+* **Maths shows as `\( x^2 \)` with backslashes.** Same cause — `assets/vendor/katex` is missing. Upload the `assets` folder again.
+* **I changed something and the site still shows the old version.** GitHub Pages takes a minute or two; then press **Ctrl + F5** to bypass the browser's saved copy.
+* **404 — "There isn't a GitHub Pages site here".** Check **Settings → Pages**: source *Deploy from a branch*, branch `main`, folder `/ (root)`. The repository must be public.
 
 ## Changing things later
 
